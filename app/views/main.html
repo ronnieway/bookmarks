@@ -1,0 +1,55 @@
+<div class="leftPanel">
+  <p><b>CATEGORIES</b></p>
+  <ul>
+    <li ng-repeat="cat in cats">
+      <a ng-if="cat.status > 0" ng-href="#!/{{ cat.id }}">{{cat.name}}</a>
+    </li>
+  </ul>
+</div>
+
+<h2>Settings</h2>
+<p>Here you can make some settings for the app. You can choose how many categories you would like to use. Also you can change the default categories names here.</p>
+<table>
+  <thead>
+    <tr>
+      <th>
+        Activate
+      </th>
+      <th>
+        Current name
+      </th>
+      <th>
+        Change name
+      </th>
+      <th>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="cat in cats">
+      <td>
+        <div class="switch">
+          <label>
+            Off
+            <input type="checkbox" id="check{{ cat.id }}" ng-checked="{{ cat.status }}" ng-click="changeStatus($event, cat.status)">
+            <span class="lever"></span>
+            On
+          </label>
+        </div>
+      </td>
+      <td>
+        {{ cat.name }}
+      </td>
+      <td>
+        <input placeholder="{{ cat.name }}" id="input{{ cat.id }}" type="text" ng-model="changedName" name="theName">
+      </td>
+      <td>
+        <a id="bname{{ cat.id }}" class="waves-effect waves-teal btn-flat" ng-show="changedName" ng-click="changeName($event); theName.$setPristine()">Save</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+

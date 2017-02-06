@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bookmarks and Info</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="bookmarksApp">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div class="top">
+      <a href="#/" class="brand-logo">
+        <h1 class="center-align">Bookmarks and Info</h1>
+      </a>
+    </div>
+
+    <div class="container theMain">
+      <div ng-view=""></div>
+    </div>
+
+    <div id="footer" class="footer">
+      <div class="container center-align">
+        <p class="copyright"><b>Created by RD</b></p>
+      </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/3.6.8/firebase.js"></script>
+    <script src="scripts/firebase.js">
+      // Initialize Firebase 
+    </script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+        <script
+          src="https://code.jquery.com/jquery-3.1.1.min.js"
+          integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+          crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/1.js"></script>
+        <script src="scripts/controllers/2.js"></script>
+        <script src="scripts/controllers/3.js"></script>
+        <script src="scripts/controllers/4.js"></script>
+        <script src="scripts/controllers/5.js"></script>
+        <script src="scripts/controllers/6.js"></script>
+        <script src="scripts/controllers/7.js"></script>
+        <script src="scripts/controllers/8.js"></script>
+        <script src="scripts/controllers/9.js"></script>
+        <script src="scripts/controllers/10.js"></script>
+        <script src="scripts/controllers/11.js"></script>
+        <script src="scripts/controllers/12.js"></script>
+        <script src="scripts/controllers/13.js"></script>
+        <script src="scripts/controllers/14.js"></script>
+        <script src="scripts/controllers/15.js"></script>
+        <script src="scripts/services/catmanagement.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

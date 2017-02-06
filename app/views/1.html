@@ -1,0 +1,99 @@
+<div class="leftPanel">
+  <p><b>CATEGORIES</b></p>
+  <ul>
+    <li ng-repeat="cat in cats">
+      <a ng-show="cat.status > 0" ng-href="#!/{{ cat.id }}">{{cat.name}}</a>
+    </li>
+  </ul>
+</div>
+
+<h2>{{theCatName}} links and info</h2>
+<ul>
+	<li ng-repeat="bookmark in bookmarks">
+		<div class="row valign-wrapper">
+			<div class="col s11 m11 l11 valign">
+				<p class="hide">ID: {{ bookmark.id }}</p>
+				<p class="bookmarkTitle"><b>Title: <a href='{{ bookmark.url }}'>{{ bookmark.title }}</a></b></p>
+				<p ng-if="bookmark.text != ''"><b>Description:</b> {{ bookmark.text }}</p>
+			</div>
+			<div class="col s1 m1 l1 valign">
+				<a class="btn-floating waves-effect waves-light brown darken-4" ng-click="startEditing(); setEditedBookmark(bookmark);"><i class="material-icons">mode_edit</i></a>
+			</div>
+		</div>
+		<hr>
+	</li>
+</ul>
+<div class="center-align button-container">
+	<a class="waves-effect waves-light btn brown darken-4" ng-click="startCreating();" ng-if="!showCreateDiv() && !showEditDiv()">Add new bookmark</a>
+</div>
+
+<div id="editFormHere">
+</div>
+<div class="row createB" ng-if="showCreateDiv()">
+	<h3>Create new bookmark</h3>
+	<form class="col s12 m12 l12">
+		<div class="row">
+			<div class="input-field col s12 m12 l12">
+				<input id="bookmarkTitle" type="text" class="validate" required ng-model="newBookmark.title">
+				<label for="bookmarkTitle">Bookmark title</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12 m12 l12">
+				<input id="bookmarkURL" type="text" ng-model="newBookmark.url">
+				<label for="bookmarkURL">Bookmark URL</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12 m12 l12">
+				<textarea rows="10" id="bookmarkText" type="text" ng-model="newBookmark.text"></textarea>
+				<label for="bookmarkText">Text, or description</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s12 m12 l12">
+				<button class="btn waves-effect waves-light brown darken-4" type="submit" name="action" ng-click="createBookmark(newBookmark);">Save new bookmark</button>
+				<a class="btn waves-effect waves-light grey darken-1" ng-click="cancelCreating();">Cancel</a>
+			</div>
+		</div>
+	</form>
+</div>
+
+<div class="row editB" ng-if="showEditDiv()">
+	<h3>Edit the bookmark</h3>
+	<a class="btn-floating btn red right" ng-click="removeBookmark(bookmark);">
+		<i class="material-icons">delete</i>
+	</a>
+	<form class="col s12 m12 l12">
+		<div class="row hide">
+			<div class="input-field col s12 m12 l12">
+				<input id="bookmarkId" type="text" class="validate" ng-model="bookmark.id" disabled >
+				<label for="bookmarkId">ID</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12 m12 l12">
+				<input id="bookmarkTitle" type="text" required ng-model="bookmark.title">
+				<label for="bookmarkTitle" class="active">Bookmark title</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12 m12 l12">
+				<input id="bookmarkURL" type="text" ng-model="bookmark.url">
+				<label for="bookmarkURL" class="active">Bookmark URL</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12 m12 l12">
+				<textarea rows="10" id="bookmarkText" type="text" ng-model="bookmark.text"></textarea>
+				<label for="bookmarkText" class="active">Text, or description</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s12 m12 l12">
+				<button class="btn waves-effect waves-light brown darken-4" type="submit" name="action" ng-click="updateBookmark(bookmark);">Save new bookmark</button>
+				<a class="btn waves-effect waves-light grey darken-1" ng-click="cancelEditing();">Cancel</a>
+			</div>
+		</div>
+	</form>		
+</div>

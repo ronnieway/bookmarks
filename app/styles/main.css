@@ -1,0 +1,176 @@
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+  background-color: #f9fbe7;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  background-color: #f4ff81;
+}
+/* Make the masthead heading the same height as the navigation */
+.header a {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding: 20px;
+  color: #3e2723;
+  font-size: 20px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  border-top: 1px solid #e5e5e5;
+  background-color: #3e2723;
+  position: relative;
+}
+
+.theMain {
+  min-height: 70vh;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+.top {
+  background-color: #5d4037;
+}
+
+.top h1 {
+  margin: 0;
+  padding: 2vh 1vw 2vh 1vw;
+}
+
+.top a {
+  color: white;
+}
+
+h2 {
+  font-size: 32px;
+  background-color: #795548;
+  color: #f4ff81;
+  padding: 1vw;
+}
+
+.bookmarkTitle {
+  font-size: 20px;
+}
+
+.bookmarkTitle a {
+  color: white;
+  background-color: #795548;
+  padding: 0.5vh 2vw 0.5vh 2vw;
+}
+
+.col p {
+  padding: 0 1vw 0 1vw;
+}
+
+.button-container {
+  padding: 1vw;
+}
+
+.copyright {
+  color: white;
+  margin: 0;
+  padding: 1vw;
+}
+
+.createB, .editB {
+  background-color: #d4e157;
+  color: #3e2723;
+  padding: 2vw;
+  border: 1px solid #3e2723;
+}
+
+label {
+  text-align: left !important; 
+  color: #3e2723 !important;
+  font-size: 18px !important;
+  padding: 1vh 0 0 0 !important;
+}
+
+.leftPanel {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 15vw;
+  height: 100vh;
+  background-color: #f4ff81;
+  padding-left: 1vw;
+  z-index: 22;
+}
+
+.leftPanel a {
+  color: #3e2723;
+}
+
+.leftPanel a:hover, .leftPanel a:focus {
+  background-color: #3e2723;
+  color: #f4ff81;
+}
+
+.leftPanel li {
+  padding: 0 0 1vw 0;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
